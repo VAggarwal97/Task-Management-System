@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Management Web App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="heading">Task Management WebApp</h1>
+      <!-- Inside the <header> element -->
+      <div class="headbutns">
+        <div class="search-bar">
+          <i class="search-icon fas fa-search"></i>
+          <input
+            class="searchinput"
+            type="text"
+            id="searchInput"
+            placeholder="Search tasks..."
+          />
+        </div>
+      </div>
+    </header>
+    <div class="filters">
+      <!-- Inside the filters div -->
+      <label class="filtlable" for="filterCompletion"
+        >Filter by Completion:</label
+      >
+      <select id="filterCompletion">
+        <option value="all">All</option>
+        <!-- <option style="color: green" value="completed">Completed</option> -->
+        <option style="color: red" value="incomplete">Incomplete</option>
+      </select>
+
+      <label class="filtlable" for="filterCategory">Filter by Category:</label>
+      <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="shopping">Shopping</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <main>
+      <div class="task-form">
+        <label class="entertask" for="taskInput">Enter Task Here 👇</label>
+        <input type="text" id="taskInput" placeholder="Enter a new task" />
+        <input type="date" id="dueDateInput" />
+
+        <select id="categoryInput">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="shopping">Shopping</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Inside the task creation form -->
+        <select id="priorityInput">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+      <div id="taskList" class="task-list"></div>
+      <!-- Inside the <header> element -->
+      <div class="footer">
+        <div id="taskCount">Total Tasks : 0</div>
+        <div id="completedTaskCount">Completed Tasks : 0</div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+* {
+  margin: 1px;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+.heading {
+  font-size: 30px;
+}
+header {
+  background-color: #0c7ceb;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+.headbutns {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+.filtlable {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 30px;
+  align-items: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.entertask {
+  font-weight: 900;
+}
+/* Task form styles */
+.task-form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Search bar styles */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.search-icon {
+  color: #f4f3f3;
+  margin-right: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+/* ... Rest of the styles ... */
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+}
+
+#addTaskBtn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+  background-color: #2980b9;
+}
+
+/* Task list styles */
+.task-list {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  background-color: #dff0d8;
+}
+
+.task-text {
+  display: flex;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+.category {
+  margin: 10px;
+}
+.priority {
+  margin: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+.edit-btn {
+  margin: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  width: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.edit-btn:hover {
+  color: #232323;
+  background-color: #80befc;
+}
+.delete-btn {
+  margin: 10px;
+  background-color: #db3434;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  width: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.delete-btn:hover {
+  color: #232323;
+  background-color: #f38c8c;
+}
+.complete-btn {
+  margin: 10px;
+  background-color: #0dff00;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.complete-btn:hover {
+  color: #232323;
+  background-color: #abfaac;
+}
+.change-priority-btn,
+.change-due-date-btn {
+  background-color: #ecf0f1;
+  border: none;
+  color: #3498db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.change-priority-btn:hover,
+.change-due-date-btn:hover {
+  background-color: #d5dbdb;
+  color: #2980b9;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+/* Task count styles */
+#taskCount,
+#completedTaskCount {
+  margin-top: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.task-item.complete {
+  background-color: rgb(185, 249, 185);
+}
